@@ -1,4 +1,4 @@
-# Project Name Here
+# The Last of Us
 ***
 ## Link To Project Proposal
 link to wiki page here containing proposal slides
