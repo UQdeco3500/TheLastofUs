@@ -15,7 +15,7 @@ class StartPage extends StatelessWidget {
           children: <Widget>[
             // Logo Image (Replace 'logo.png' with your image asset)
             Image.asset(
-              '../assets/logo.jpeg',
+              '../assets/logo.jpg',
               width: 100, // Adjust width as needed
               height: 100, // Adjust height as needed
             ),
