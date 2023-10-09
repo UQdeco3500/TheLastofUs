@@ -1,26 +1,7 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'main.dart';
 
 class LoginPage extends StatelessWidget {
-
-  var result = null;
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-
-  String authenticationResult = '';
-
-  void authenticateUser() async {
-
-    String pythonScript = 'PythonScripts/Loginscript.py';
-    List<String> arguments = [
-      pythonScript,
-      emailController.text,
-      passwordController.text,
-    ];
-
-    result = await Process.run('python', arguments);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +23,7 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
-                controller: emailController,
+                // controller: emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   border: OutlineInputBorder(),
@@ -54,7 +35,7 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
-                controller: passwordController,
+                // controller: passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Password',
@@ -64,14 +45,9 @@ class LoginPage extends StatelessWidget {
             ),
 
             ElevatedButton(
-              onPressed: () {
-                authenticateUser();
-                if (result.exitCode == 0) {
-                Navigator.push(context, MaterialPageRoute(
-                builder: (context) => HomePage(),
-                ));
-                }
-              },
+          onPressed: () {
+          Navigator.pushReplacementNamed(context, '/home');
+                },
               child: Text('Login'),
             ),
           ],
