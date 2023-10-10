@@ -10,27 +10,27 @@ class _SuggestionPageState extends State<SuggestionPage> {
 
   final List<SuggestionItem> suggestionItems = [
     SuggestionItem(
-      imagePath: "lib/assets/logoplaceholder.png", // Same image path
+      imagePath: "lib/assets/Winter/winter 2.jpeg", // Same image path
       price: "\$99.99",
       review: "4.6/5",
     ),
     SuggestionItem(
-      imagePath: "lib/assets/logoplaceholder.png", // Same image path
+      imagePath: "lib/assets/Summer/summer 2.jpeg", // Same image path
       price: "\$79.99",
       review: "4.2/5",
     ),
     SuggestionItem(
-      imagePath: "lib/assets/logoplaceholder.png", // Same image path
+      imagePath: "lib/assets/Street/street 2.jpeg", // Same image path
       price: "\$129.99",
       review: "4.8/5",
     ),
     SuggestionItem(
-      imagePath: "lib/assets/logoplaceholder.png", // Same image path
+      imagePath: "lib/assets/Formal/formal 1.jpeg", // Same image path
       price: "\$89.99",
       review: "4.4/5",
     ),
     SuggestionItem(
-      imagePath: "lib/assets/logoplaceholder.png", // Same image path
+      imagePath: "lib/assets/Formal/formal 2.jpeg", // Same image path
       price: "\$149.99",
       review: "4.9/5",
     ),

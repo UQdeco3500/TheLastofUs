@@ -53,6 +53,16 @@ dev_dependencies:
 flutter:
   assets:
     - "lib/assets/logoplaceholder.png"
+    - "lib/assets/Casual/casual 1.jpeg"
+    - "lib/assets/Casual/casual 2.jpeg"
+    - "lib/assets/Formal/formal 1.jpeg"
+    - "lib/assets/Formal/formal 2.jpeg"
+    - "lib/assets/Street/street 1.jpeg"
+    - "lib/assets/Street/street 2.jpeg"
+    - "lib/assets/Summer/summer 1.jpeg"
+    - "lib/assets/Summer/summer 2.jpeg"
+    - "lib/assets/Winter/winter 1.jpeg"
+    - "lib/assets/Winter/winter 2.jpeg"
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
