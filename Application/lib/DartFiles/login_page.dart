@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartmirrorapp/DartFiles/homepage.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -46,7 +47,7 @@ class LoginPage extends StatelessWidget {
 
             ElevatedButton(
           onPressed: () {
-          Navigator.pushReplacementNamed(context, '/home');
+          Navigator.pushReplacementNamed(context, "/home");
                 },
               child: Text('Login'),
             ),
