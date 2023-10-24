@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.0.7
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -63,6 +64,24 @@ flutter:
     - "lib/assets/Summer/summer 2.jpeg"
     - "lib/assets/Winter/winter 1.jpeg"
     - "lib/assets/Winter/winter 2.jpeg"
+    - "lib/assets/Past Purchases/paststreet 2.jpeg"
+    - "lib/assets/Past Purchases/paststreet.jpeg"
+    - "lib/assets/Past Purchases/pastcasual.jpeg"
+    - "lib/assets/NearYouImages/lady2.jpg"
+    - "lib/assets/NearYouImages/lady1.jpg"
+    - "lib/assets/NearYouImages/lady3.jpg"
+    - "lib/assets/NearYouImages/lady4.jpg"
+    - "lib/assets/NearYouImages/lady5.jpg"
+    - "lib/assets/NearYouImages/fam1.jpg"
+    - "lib/assets/NearYouImages/male1.jpg"
+    - "lib/assets/NearYouImages/male2.jpg"
+    - "lib/assets/NearYouImages/male3.jpg"
+    - "lib/assets/NearYouImages/male4.jpg"
+    - "lib/assets/NearYouImages/male5.jpg"
+    - "lib/assets/NearYouImages/male6.jpg"
+    - "lib/assets/NearYouImages/male7.jpg"
+
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

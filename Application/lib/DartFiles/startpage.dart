@@ -7,7 +7,7 @@ class StartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Smart Mirror'), // Replace with your app's name
+        title: Text('Aura'), // Replace with your app's name
       ),
       body: Center(
         child: Column(
@@ -21,7 +21,7 @@ class StartPage extends StatelessWidget {
             ),
             SizedBox(height: 16), // Add some space between logo and app name
             Text(
-              'SmartMirror',
+              'Aura',
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,

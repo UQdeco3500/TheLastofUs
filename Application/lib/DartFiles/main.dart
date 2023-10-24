@@ -5,6 +5,7 @@ import 'package:smartmirrorapp/DartFiles/startpage.dart';
 import 'CommunityPage.dart';
 import 'SuggestionPage.dart';
 import 'login_page.dart';
+import 'ProfilePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -171,18 +172,6 @@ class _ScanPageState extends State<ScanPage> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ProfilePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey[200], // Background color for ProfilePage
-      child: Center(
-        child: Text("Profile Page Content"),
       ),
     );
   }
