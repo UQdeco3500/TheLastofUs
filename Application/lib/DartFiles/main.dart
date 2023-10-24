@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smartmirrorapp/DartFiles/register_page.dart';
 import 'package:smartmirrorapp/DartFiles/startpage.dart';
 
 import 'CommunityPage.dart';
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => StartPage(),
         '/login': (context) => LoginPage(),
-        '/register': (context) => RegisterPage(),
         '/home': (context) => HomePage(),
       },
     );
@@ -43,14 +41,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SmartMirror"),
-        backgroundColor: Colors.black12, // Change this to your desired app bar color
+        title: Text(
+          "AURA",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Color(0xFF2D232A),
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.blue, // Change this to your desired selected item color
+        selectedItemColor: Colors.blue,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -104,7 +107,7 @@ class _ScanPageState extends State<ScanPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey[200], // Background color for ScanPage
+      color: Colors.grey[200],
       child: Center(
         child: GestureDetector(
           onTap: () {

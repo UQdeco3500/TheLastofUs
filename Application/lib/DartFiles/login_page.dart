@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smartmirrorapp/DartFiles/homepage.dart';
-
 
 class LoginPage extends StatelessWidget {
 
@@ -11,7 +9,14 @@ class LoginPage extends StatelessWidget {
         title: Text('Login Page'),
       ),
       body: Center(
-        child: Column(
+        child:Column(
+          children: [
+          Image.asset(
+          'lib/assets/logoplaceholder.png',
+          height: 60, // Set the height of the logo
+        ),
+        SizedBox(height: 20),
+        Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -53,7 +58,9 @@ class LoginPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ],
+        ),
+    ),
     );
   }
 }

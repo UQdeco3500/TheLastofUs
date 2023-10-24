@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
-import 'register_page.dart';
 
 class StartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Aura'), // Replace with your app's name
+        title: Text('Aura'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Logo Image (Replace 'logo.png' with your image asset)
             Image.asset(
               'lib/assets/logoplaceholder.png',
-              width: 100, // Adjust width as needed
-              height: 100, // Adjust height as needed
+              width: 200,
+              height: 200,
             ),
-            SizedBox(height: 16), // Add some space between logo and app name
+            SizedBox(height: 12),
             Text(
               'Aura',
               style: TextStyle(
@@ -27,38 +25,31 @@ class StartPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 32), // Add some space between app name and buttons
-
-            // Login Button
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => LoginPage(),
-                ));
-              },
-              child: Text('Login'),
+        SizedBox(height: 40),
+        Container(
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.redAccent,
+          ),
+          child: IconButton(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => LoginPage(),
+              ));
+            },
+            icon: Icon(
+              Icons.arrow_forward,
+              size: 32,
+              color: Colors.white,
             ),
-
-            SizedBox(height: 16), // Add some space between login and register buttons
-
-            // Register Button
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => RegisterPage(),
-                ));
-              },
-              child: Text('Register'),
+              color: Colors.white,
+              iconSize: 40,
+              padding: EdgeInsets.all(16),
+              splashRadius: 32,
+              splashColor: Colors.blueAccent,
+              highlightColor: Colors.blueAccent,
             ),
-
-            SizedBox(height: 32), // Add some space between buttons and slogan
-            Text(
-              'Shop faster and better, Coz u deserve the best',
-              style: TextStyle(
-                fontSize: 16.0,
-                fontStyle: FontStyle.italic,
-              ),
-            ),
+        ),
           ],
         ),
       ),

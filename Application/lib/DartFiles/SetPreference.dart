@@ -10,17 +10,19 @@ class SetPreferencePage extends StatefulWidget {
     "Formal",
     "Street",
     "Summer",
+    "Winter",
     "Sporty",
-    "Bohemian",
     "Vintage",
     "Classic",
-    "Elegant",
+    "Bohemian",
     "Retro"
   ];
   int maxPreferences = 4; // Maximum number of preferences allowed
   int minPreferences = 2;
 
-
+  List<String> preferenceList() {
+    return (_SetPreferencePageState().getPreferences());
+  }
 }
 
 class _SetPreferencePageState extends State<SetPreferencePage> {
@@ -31,7 +33,7 @@ class _SetPreferencePageState extends State<SetPreferencePage> {
     super.initState();
     selected = List.generate(widget.preferences.length, (index) => false);
     loadPreferences();
-    }
+  }
 
   void loadPreferences() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -81,6 +83,7 @@ class _SetPreferencePageState extends State<SetPreferencePage> {
         }
       }
       savePreferences(); // Call this after updating selected preferences
+      getPreferences();
     });
   }
 
@@ -97,40 +100,50 @@ class _SetPreferencePageState extends State<SetPreferencePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            SizedBox(height: 20), // Space above the logo
+            Image.asset(
+              'lib/assets/logoplaceholder.png',
+              height: 60, // Set the height of the logo
+            ),
+            SizedBox(height: 50), // Spacing
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Expanded(
-                  child: Column(
-                    children: widget.preferences.sublist(0, 5).asMap().entries.map((entry) {
-                      int index = entry.key;
-                      String preference = entry.value;
-                      return PreferenceButton(
-                        text: preference,
-                        selected: selected[index],
-                        onTap: () {
-                          togglePreference(index);
-                        },
-                      );
-                    }).toList(),
-                  ),
-                ),
-                Expanded(
-                  child: Column(
-                    children: widget.preferences.sublist(5).asMap().entries.map((entry) {
-                      int index = entry.key + 5;
-                      String preference = entry.value;
-                      return PreferenceButton(
-                        text: preference,
-                        selected: selected[index],
-                        onTap: () {
-                          togglePreference(index);
-                        },
-                      );
-                    }).toList(),
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        children: widget.preferences.sublist(0, 5).asMap().entries.map((entry) {
+                          int index = entry.key;
+                          String preference = entry.value;
+                          return PreferenceButton(
+                            text: preference,
+                            selected: selected[index],
+                            onTap: () {
+                              togglePreference(index);
+                            },
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: widget.preferences.sublist(5).asMap().entries.map((entry) {
+                          int index = entry.key + 5;
+                          String preference = entry.value;
+                          return PreferenceButton(
+                            text: preference,
+                            selected: selected[index],
+                            onTap: () {
+                              togglePreference(index);
+                            },
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -157,7 +170,7 @@ class PreferenceButton extends StatelessWidget {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         primary: selected ? Colors.green : Colors.grey,
-        minimumSize: Size(120, 50), // Adjust the size as needed
+        minimumSize: Size(120, 50),
         padding: EdgeInsets.all(16),
       ),
       onPressed: () {

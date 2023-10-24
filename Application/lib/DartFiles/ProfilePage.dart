@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'SetPreference.dart';
+import 'FavoriteBrands.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -12,12 +13,16 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My Profile"),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+        Column(
+        children: [
+        Image.asset(
+          'lib/assets/logoplaceholder.png',
+          height: 60, // Set the height of the logo
+        ),
+            SizedBox(height: 10),
             // Profile Picture and Name
             Container(
               padding: EdgeInsets.all(16),
@@ -25,7 +30,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: [
                   CircleAvatar(
                     radius: 60,
-                    backgroundImage: AssetImage("lib/assets/profile_pic.jpg"), // Replace with your profile picture
+                    backgroundImage: AssetImage("lib/assets/profile_pic.jpeg",
+                    ),
                   ),
                   SizedBox(height: 16),
                   Text(
@@ -44,7 +50,7 @@ class _ProfilePageState extends State<ProfilePage> {
               onTap: () {
                 // Navigate to the favorite brands selection page
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => FavoriteBrandsPage()),
+                  MaterialPageRoute(builder: (context) => FavoriteBrands()),
                 );
               },
             ),
@@ -95,7 +101,9 @@ class _ProfilePageState extends State<ProfilePage> {
             PastPurchases(),
           ],
         ),
+      ],
       ),
+    ),
     );
   }
 }
@@ -133,19 +141,6 @@ class ProfileOption extends StatelessWidget {
   }
 }
 
-class FavoriteBrandsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-        title: Text("Favorite Brands"),
-    )
-    )
-    ;
-    // Implement the brand selection UI here
-  }
-}
-
 class PastPurchases extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -164,15 +159,15 @@ class PastPurchases extends StatelessWidget {
         // Implement past purchases here
         PastPurchaseItem(
           image: "lib/assets/Past Purchases/paststreet 2.jpeg",
-          itemName: "Item 1",
+          itemName: "Uniqlo Shirt",
         ),
         PastPurchaseItem(
           image: "lib/assets/Past Purchases/pastcasual.jpeg",
-          itemName: "Item 2",
+          itemName: "H&M Casual",
         ),
         PastPurchaseItem(
           image: "lib/assets/Past Purchases/paststreet.jpeg",
-          itemName: "Item 3",
+          itemName: "Streetwear",
         ),
       ],
     );
@@ -191,9 +186,11 @@ class PastPurchaseItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Image.asset(image,
-          width: 120,
-          height: 120),
+      leading: Image.asset(
+        image,
+        width: 120,
+        height: 120,
+      ),
       title: Text(itemName), // Replace with the item name
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
