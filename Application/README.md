@@ -12,14 +12,18 @@ Aura is an innovative mobile application designed to make your shopping experien
 # Getting Started with Aura Code
 Follow these steps to work with the Aura source code and run the application on your local machine.
 -Clone the Aura GitHub repository to your local machine by using the following command
+
     ```bash
     git clone https://github.com/your-username/aura-app.git
     ```
---Make sure you have the Flutter SDK installed on your machine. If it's not already installed, you can download and install it from the official Flutter website [Flutter Installation](https://flutter.dev/docs/get-started/install).
+    
+Make sure you have the Flutter SDK installed on your machine. If it's not already installed, you can download and install it from the official Flutter website [Flutter Installation](https://flutter.dev/docs/get-started/install).
 
--Set up an emulator or choose a running device in Chrome or Edge for development. Alternatively, you can use physical devices for testing.
--Head to the `main.dart` file in Application\lib
--Execute the following command to build and run the Aura application on your selected device:
+Set up an emulator or choose a running device in Chrome or Edge for development. Alternatively, you can use physical devices for testing.
+
+Head to the `main.dart` file in Application\lib
+
+Execute the following command to build and run the Aura application on your selected device:
 
     ```bash
     flutter run
