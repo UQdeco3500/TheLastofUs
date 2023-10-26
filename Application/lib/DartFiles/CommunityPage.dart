@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'main.dart';
+import '../main.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -162,7 +162,7 @@ class _NearYouContentState extends State<NearYouContent> {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, // Two photos per row
-        childAspectRatio: 1, // Adjust as needed
+        childAspectRatio: 1,
       ),
       itemCount: selectedPhotos.length,
       itemBuilder: (context, index) {
@@ -214,6 +214,7 @@ class _BrandContentState extends State<BrandContent> {
     BrandProduct("Armani Exchange", "lib/assets/Brands/Armani Exchange 2.jpg", 4.0),
     BrandProduct("Armani Exchange", "lib/assets/Brands/Armani Exchange 3.jpg", 4.2),
     BrandProduct("Nike", "lib/assets/Brands/Nike 0.jpeg", 4.1),
+    BrandProduct("Nike", "lib/assets/Brands/Nike 1.jpg", 3.1),
     BrandProduct("Nike", "lib/assets/Brands/Nike 2.jpg", 4.6),
     BrandProduct("Uniqlo", "lib/assets/Brands/Uniqlo 0.jpg", 4.1),
     BrandProduct("Uniqlo", "lib/assets/Brands/Uniqlo 1.jpg", 4.7),
