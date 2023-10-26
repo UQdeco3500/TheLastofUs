@@ -215,7 +215,6 @@ class _BrandContentState extends State<BrandContent> {
     BrandProduct("Armani Exchange", "lib/assets/Brands/Armani Exchange 3.jpg", 4.2),
     BrandProduct("Nike", "lib/assets/Brands/Nike 0.jpeg", 4.1),
     BrandProduct("Nike", "lib/assets/Brands/Nike 2.jpg", 4.6),
-    BrandProduct("Nike", "lib/assets/Brands/Nike 1.jpeg", 4.3),
     BrandProduct("Uniqlo", "lib/assets/Brands/Uniqlo 0.jpg", 4.1),
     BrandProduct("Uniqlo", "lib/assets/Brands/Uniqlo 1.jpg", 4.7),
     BrandProduct("Uniqlo", "lib/assets/Brands/Uniqlo 2.jpg", 4.0),
